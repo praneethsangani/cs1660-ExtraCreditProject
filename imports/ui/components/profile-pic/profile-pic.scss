@@ -1,0 +1,52 @@
+.profile-pic {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: text-bottom;
+
+  margin-left: 4px;
+  width: 42px;
+  height: 42px;
+
+  background-color: white;
+  border: 1px solid $gray-200;
+  color: $gray-700;
+
+  user-select: none;
+  cursor: default;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.online::after {
+    content: " ";
+
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+
+    height: 6px;
+    background-color: theme-color("success");
+  }
+
+  &.idle {
+    color: $gray-300;
+
+    &::after {
+      background-color: theme-color("warning");
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .initials {
+    display: inline-block;
+    width: 100%;
+    line-height: 32px;
+    text-align: center;
+  }
+}

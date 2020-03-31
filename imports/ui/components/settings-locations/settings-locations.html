@@ -1,0 +1,25 @@
+<template name="SettingsLocations">
+  <div class="settings-locations">
+    <h3 class="mb-2">
+      Locations
+      <small class="text-muted">{{locations.count}}</small>
+    </h3>
+
+    <div class="card">
+      <div class="card-body">
+        <form id="add-location-form">
+          <div class="input-group">
+            <input type="text" class="form-control js-location-name" name="locationName" placeholder="CIT 123">
+            <span class="input-group-append">
+              <button class="btn btn-secondary" type="submit">Add</button>
+            </span>
+          </div>
+        </form>
+      </div>
+
+      {{#each location in locations}}
+        {{> LocationEntry location=location}}
+      {{/each}}
+    </div>
+  </div>
+</template>

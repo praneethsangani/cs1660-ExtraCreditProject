@@ -1,0 +1,106 @@
+/* Vendor Overrides */
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: ($spacer * 0.25),
+  2: ($spacer * 0.5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2),
+  6: ($spacer * 3),
+  7: ($spacer * 5)
+);
+
+/* Vendor */
+@import "{}/node_modules/bootstrap/scss/bootstrap.scss";
+
+/* Animations (original from animate.css) */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 15%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/* Material Icons */
+i.material-icons {
+  margin-right: 5px;
+
+  font-size: 18px;
+  vertical-align: text-top;
+
+  transition: none;
+}
+
+/* Other shared component CSS */
+
+.dashed-card {
+  color: $navbar-light-color;
+  border-width: 2px;
+  border-style: dashed;
+  transition: all 0.2s ease;
+
+  @include hover-focus-active {
+    color: $navbar-light-hover-color;
+    text-decoration: none !important;
+    border-color: $navbar-light-hover-color;
+  }
+}
+
+/* Layouts */
+@import "{}/imports/ui/layouts/app-body/app-body.scss";
+
+/* Pages */
+@import "{}/imports/ui/pages/login-password/login-password.scss";
+@import "{}/imports/ui/pages/index/index.scss";
+@import "{}/imports/ui/pages/settings/settings.scss";
+
+/* Components */
+@import "{}/imports/ui/components/alerts/alert-ending-soon/alert-ending-soon.scss";
+
+@import "{}/imports/ui/components/footer/footer.scss";
+@import "{}/imports/ui/components/nav/nav.scss";
+
+@import "{}/imports/ui/components/modals/modal-join-queue/modal-join-queue.scss";
+
+.modal {
+  .close .material-icons {
+    margin-right: 0;
+    vertical-align: middle;
+  }
+
+  .modal-dialog {
+    animation-duration: 0.4s;
+  }
+}
+
+@import "{}/imports/ui/components/profile-pic/profile-pic.scss";
+
+@import "{}/imports/ui/components/queue-card/queue-card.scss";
+@import "{}/imports/ui/components/queue-header/queue-header.scss";
+@import "{}/imports/ui/components/queue-actions/queue-actions.scss";
+@import "{}/imports/ui/components/queue-alert-restricted-session/queue-alert-restricted-session.scss";
+@import "{}/imports/ui/components/queue-alert-restricted-session/device-card/device-card.scss";
+@import "{}/imports/ui/components/queue-table/queue-table.scss";
+
+@import "{}/imports/ui/components/settings-courses/courses-general/courses-general.scss";
+@import "{}/imports/ui/components/settings-courses/courses-analytics/courses-analytics.scss";
+@import "{}/imports/ui/components/settings-locations/settings-locations.scss";
+@import "{}/imports/ui/components/settings-locations/location-entry/location-entry.scss";
+
+@import "{}/imports/ui/components/ticket/ticket.scss";
+@import "{}/imports/ui/components/ticket/ticket-drawer/ticket-drawer.scss";

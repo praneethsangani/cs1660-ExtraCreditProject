@@ -1,0 +1,47 @@
+.custom-table {
+  min-height: 400px;
+
+  border: 1px solid $gray-200;
+  border-radius: 4px;
+}
+
+.thead > .row,
+.tbody .holder > .row {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  border-bottom: 1px solid $gray-200;
+
+  > .td {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.thead {
+  font-weight: bold;
+}
+
+.actions {
+  flex-direction: row-reverse;
+}
+
+.cutoff-marker {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  .small {
+    margin-left: 0.5rem;
+  }
+}
+
+.row.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 400px;
+
+  border-bottom: 0;
+}

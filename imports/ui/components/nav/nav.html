@@ -1,0 +1,27 @@
+<template name="Nav">
+  <div class="app-nav">
+    <div class="container">
+      <nav class="navbar navbar-light flex-row px-0 py-3">
+        <a class="navbar-brand mr-auto" href="/">SignMeUp</a>
+
+        {{#if currentUser}}
+          <span class="navbar-text mr-3 py-2 hidden-xs-down">Welcome, {{currentUser.firstName}}</span>
+
+          <ul class="navbar-nav mr-3">
+              <li class="nav-item">
+                <a class="nav-link" href="/settings">Settings</a>
+              </li>
+          </ul>
+        {{/if}}
+
+        <form class="form-inline">
+          {{#if currentUser}}
+            <button type="button" class="btn btn-outline-secondary js-sign-out">Sign Out</button>
+          {{else}}
+            <button type="button" class="btn btn-primary js-sign-in">Sign In</button>
+          {{/if}}
+        </form>
+      </nav>
+    </div>
+  </div>
+</template>

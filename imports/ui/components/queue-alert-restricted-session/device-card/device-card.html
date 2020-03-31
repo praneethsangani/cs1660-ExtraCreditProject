@@ -1,0 +1,17 @@
+<template name="DeviceCard">
+  <div class="device-card mt-3 mr-3 p-3 media {{currentDeviceClass session}}">
+    <div class="media-left mr-2" href="#">
+      <i class="media-object device-icon material-icons">{{icon}}</i>
+    </div>
+    <div class="media-body">
+      <strong class="media-heading">{{session.name}}</strong>
+      <p class="text-muted mb-0">{{session.user.fullName}} &middot; {{formattedUserAgent session.userAgent}}</p>
+    </div>
+
+    {{#if isInRole 'admin,mta,hta,ta' session.queue.courseId}}
+      <button type="button" class="close js-release-session">
+        <i class="material-icons">close</i>
+      </button>
+    {{/if}}
+  </div>
+</template>

@@ -1,0 +1,24 @@
+<template name="QueueMoreDropdown">
+  <div class="queue-more-dropdown btn-group">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      More
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+      <a class="dropdown-item js-restrict-signups" href="#">Restrict signups to device</a>
+      <div data-toggle="tooltip" data-placement="left" title="Coming soon!">
+        <a class="dropdown-item disabled" href="#">
+          Show past tickets
+        </a>
+      </div>
+
+      <div class="dropdown-divider"></div>
+
+      <a class="dropdown-item text-warning js-shuffle-tickets" href="#">
+        Shuffle all tickets
+      </a>
+      <a class="dropdown-item text-danger js-delete-all-tickets" href="#">
+        Delete all tickets
+      </a>
+    </div>
+  </div>
+</template>

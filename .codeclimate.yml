@@ -1,0 +1,12 @@
+version: "2"
+plugins:
+  eslint:
+    enabled: true
+    channel: "stable"
+    config:
+      config: ".eslintrc.codeclimate.json"
+
+  stylelint:
+    enabled: true
+    config:
+      config: ".stylelintrc.json"

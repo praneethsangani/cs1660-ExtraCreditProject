@@ -1,0 +1,43 @@
+<template name="LocationEntry">
+  <div class="card-body location-entry">
+    <div class="row mb-0">
+      {{#if isEditing}}
+        <form class="location-name-edit-form js-location-name-edit-form">
+          <div class="col-8 mb-0">
+            <input type="text" class="form-control" name="name" placeholder="CIT 123" value="{{location.name}}">
+          </div>
+          <div class="col-4 text-right">
+            <button
+              class="btn btn-secondary js-cancel-edit-location"
+              type="button">
+              <i class="material-icons d-md-none mr-0">cancel</i>
+              <span class="d-none d-md-inline">Cancel</span>
+            </button>
+            <button
+              class="btn btn-success"
+              type="submit">
+              <i class="material-icons d-md-none mr-0">save</i>
+              <span class="d-none d-md-inline">Save</span>
+            </button>
+          </div>
+        </form>
+      {{else}}
+        <p class="location-name col-8 mb-0">
+          {{location.name}}
+        </p>
+        <div class="col-4 text-right">
+          <button
+            class="btn btn-secondary js-edit-location">
+            <i class="material-icons d-md-none mr-0">edit</i>
+            <span class="d-none d-md-inline">Edit</span>
+          </button>
+          <button
+            class="btn btn-danger js-remove-location">
+            <i class="material-icons d-md-none mr-0">delete</i>
+            <span class="d-none d-md-inline">Remove</span>
+          </button>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</template>
